@@ -1,0 +1,110 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <title>Store UTAGS | Busqueda</title>
+  <link href="http://www.utags.edu.mx/templates/tx_academia2/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"    crossorigin="anonymous" />
+  <link rel="stylesheet" href="code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/productos.css">
+</head>
+<body>
+  <!--Menu navegación-->
+	<nav class="navbar navbar-expand-lg navbar-Dark bg-Dark p-3">
+    <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img alt="lobos UTags" src="img/lobos_UT.png" style="height: 78px;">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="col-4">
+            <!--<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+            </ul>-->
+          </div>          
+          <div class="col-5 mt-3">
+            <div class="mr-auto mb-4">
+              <div class="d-inline-block col-8">
+                <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search" id="txt_busqueda">
+              </div>
+              <div class="d-inline-block">
+                <button class="btn btn-outline-info btn-rounded waves-effect waves-light" style="margin-bottom: 5px;" id="btn_buscar" type="button" onclick="busquedaExterna();">Buscar</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a id="urlCarrito" href="#">
+              <button class="btn_carrito" id="btn_carrito" value="0">0</button>
+            </a>
+          </div>  
+          <div class="" style="color: #fff; text-align: right; font-size: 17px;">
+            <a href="ordenes.html">
+            <span id="usr_name">*</span></a> | <span id="btn_sesion">
+              <a id="btn_sesionAct" href="#">La sesión</a>
+            </span>&nbsp;&nbsp;
+            <img src="img/perfil.png" width="22%;" />
+          </div>    
+        </div>
+    </nav>
+  <!--Fin Menu navegacion-->
+  <!--Cuerpo del contenido-->
+  <div id="div_producto">
+    
+  </div>
+  <!--Fin Curpo del contenido-->
+  <!-- Template producto -->
+  <h5 class="text-info" id="informeBusqueda"></h5>
+  <div id="templateProducto" style="display: none;">
+    <div class="row mt-4 justify-content-center">
+      <div class="col-1" id="div_producto">
+          <div class="" id="div_slide">
+              <img class="img-fluid slideImagen" src="imgProductosm" alt="" onclick="sliderImgs(this);">
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="container">
+              <!--<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>-->
+              <img id="expandedImg">
+              <div id="imgtext"></div>
+          </div>
+      </div>
+      <div class="col-5">
+        <h4>renderTitulo</h4>
+        <br>
+        <p class="prd_txt">renderDescripcion</p>
+        <div>
+          <br>
+          <h5>Descripción detallada</h5>
+          <div class="prd_tab">renderDetalle</div>
+        </div>
+        <strong>renderPrecio MXN</strong><br><br>
+        <input type="hidden" name="txt_IdProd" id="txt_IdProd" value="valIdProd">
+        <input type="number" class="form-control d-inline mx-1" name="num_cant" id="num_cant" min="1" value="1" style="width: 80px !important;">
+        <button class="form-control btn btn-primary" onclick="addcarrito()" style="width: 160px !important;">Agregar al carrito</button>
+        <!--<button onclick="borraCarrito()">borrar al carrito</button>-->
+      </div>
+    </div>
+  </div>
+  <!--Fin Template producto-->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/general.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

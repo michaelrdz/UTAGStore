@@ -1,0 +1,141 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <title>Store UTAGS | Carrito de compras</title>
+  <link href="http://www.utags.edu.mx/templates/tx_academia2/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"    crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/general.css">
+  <link rel="stylesheet" href="css/productos.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=AYxGcdBZLWldzlRhZtroj4TdtmbSXx5t_qIZrAgX3L6qGm2cObVd2_8ZpuHD_7IdZ23-K-NTYbx-6WU1&currency=MXN&amp;locale=es_MX">
+	</script>
+  <script src="js/paypal.js"></script>
+</head>
+<body>
+  <!--Menu navegación-->
+	<nav class="navbar navbar-expand-lg navbar-Dark bg-Dark p-3">
+    <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img alt="lobos UTags" src="img/lobos_UT.png" style="height: 78px;">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="col-4">
+            <!--<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+            </ul>-->
+          </div>          
+          <div class="col-5 mt-3">
+            <div class="mr-auto mb-4">
+              <div class="d-inline-block col-8">
+                <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search" id="txt_busqueda">
+              </div>
+              <div class="d-inline-block">
+                <button class="btn btn-outline-info btn-rounded waves-effect waves-light" style="margin-bottom: 5px;" id="btn_buscar" type="button" onclick="busquedaExterna();">Buscar</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <a id="urlCarrito" href="#">
+              <button class="btn_carrito" id="btn_carrito" value="0">0</button>
+            </a>
+          </div>  
+          <div class="" style="color: #fff; text-align: right; font-size: 17px;">
+            <a href="ordenes.html">
+            <span id="usr_name">*</span></a> | <span id="btn_sesion">
+              <a id="btn_sesionAct" href="#">La sesión</a>
+            </span>&nbsp;&nbsp;
+            <img src="img/perfil.png" width="22%;" />
+          </div>    
+        </div>
+    </nav>
+  <!--Fin Menu navegacion-->
+  <!--Cuerpo del contenido-->
+  <div id="div_carrito">
+    <div class="row mt-6 justify-content-center">
+        <div class="col-10"><br><h4 style="font-size: 28px;">Resumen de pedido</h4>
+          <br>
+        </div>
+    </div>
+    <div class="row mt-6 justify-content-center">
+        <div class="col-10">
+          <div class="row mb-4">
+              <div class="col-4">
+                  <h6>Resumen de productos y servicios</h6>
+                  
+              </div>
+              <div class="col-5" style="text-align: center;">
+                  <h6>Total de la compra</h6>
+              </div>
+              <div class="col-3">
+                  <h6>Opciones de pago</h6>
+              </div>
+          </div>
+          <div class="row mb-4"> 
+              <div class="col-4">
+                <span id="filasCheckout">
+                  <!-- AQUÍ SE VA A IR PINTANDO CADA PRODUCTOS  -->
+                </span>
+              </div>
+              <div class="col-5 justify-content-center" style="text-align: center;">
+                <p style="font-size: 20px;">Subtotal: <strong><span id="pintaSubtotal"></span></strong></p>
+                <p style="font-size: 20px;">IVA: <strong><span id="pintaIVA"></span></strong></p>
+                <p style="font-size: 20px;">Total: <strong><span id="pintaTotal" style="color: #fc726f;"></span></strong></p>
+              </div>
+              <div class="col-3">
+                <!--<button class="btn btn-success" onclick="animamsj();">Probar animacion</button>-->
+                <div id="paypal-button-container" style="width: 250px;"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <!--Fin Curpo del contenido-->
+  <!--Vista pago aceptado-->
+  <div id="vistaPagoAceptado" style="display: none; width: 60%; margin: 0 auto;">
+    <div class="center-block">
+      <br><br>
+    <h4 style="font-size: 32px;">¡Gracias por su compra!</h4><br>
+    <p style="font-size: 18px;">Su pedido ya está siendo atendido, en breve le mandaremos un correo con toda la infirmación.<br>
+    Cualquier duda comunicarse al teléfono <span style="color: #fc726f;">449 910 5000</span> o al <span style="color: #fc726f;">correo contacto@utags.edu.mx</span></p>
+    <hr class="my-4">
+    <p>Fecha y hora en que se recibió el pago: <strong><span id="fechPago"></span></strong><br>
+    No. Pedido: <strong><span id="noPedido"></span></strong><br>
+    Monto del pago: <strong><span id="montoPago"></span></strong></p>
+    <hr class="my-4">
+    <br>
+    <button class="btn btn-success" onclick="redirInicio();">Seguir comprando</button>
+    <button class="btn btn-primary" onclick="redirHistorial();">Ver mis pedidos</button>
+  </div>
+  </div>
+  <!--Fin Vista pago aceptado-->
+  <!-- Template checkout -->
+  <h5 class="text-info" id="informeCarrito"></h5>
+  <div id="templateCarrito" style="display: none;">
+    <p>
+      <span>CantidadProducto</span> X <span>NombreProducto</span>
+    </p>
+    <hr class="my-4">
+  </div>
+  <!--Fin Template producto-->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/general.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

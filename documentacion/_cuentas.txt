@@ -1,0 +1,29 @@
+-Cuenta de pruebas (login)
+
+Correo: michaelrdz.me@gmail.com
+Password: Ut1234567
+
+Correo: 171679@utags.edu.mx
+Password: Ut1234567
+
+-Cuenta Paypal prueba
+
+Correo: sb-vh6sm5836105@personal.example.com
+Password: 9>_g&Oc8
+
+-Cuenta Paypal principal
+
+Correo: 171679@utags.edu.mx
+Password: Ut171679
+
+-API Paypal
+
+AYxGcdBZLWldzlRhZtroj4TdtmbSXx5t_qIZrAgX3L6qGm2cObVd2_8ZpuHD_7IdZ23-K-NTYbx-6WU1
+
+-Google Captcha
+
+* Para que el captcha funcione debe de estar la página en la carpeta  
+de localhost de un servidor web, puede ser IIS, Apache, XAMP, etc.
+
+Clave sitio web: 6Ldo4TkaAAAAALXEzrkQQKlPbb099yVtmThYAc6E
+Clave secreta: 6Ldo4TkaAAAAAHRWnwcUgvGlcTDjgamwafZMV34g

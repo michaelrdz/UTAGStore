@@ -1,0 +1,58 @@
+h4 {
+  color: #28c0eb;
+  font-weight: 600;
+}
+h5 {
+  color: #fc726f;
+  font-weight: 400;
+}
+h6 {
+  color: #28c0eb;
+  font-size: 22px;
+  font-weight: 400;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+nav a:hover {
+    color: #28c0eb;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+  
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  
+  .column img:hover {
+    opacity: 1;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.btn_carrito {
+  background:url(../img/shop_bag.png) no-repeat; 
+  cursor:pointer;
+  border:none;
+  width:48px;
+  height:48px;
+  background-size: cover;
+  color: #fff;
+  padding-top: 10px;
+}

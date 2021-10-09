@@ -1,0 +1,50 @@
+#div_slide {
+    padding-top: 0px !important;
+    text-align: center;
+}
+.slideImagen {
+    width: 78% !important;
+    padding-bottom: 16px;
+    cursor: pointer;
+}
+#expandedImg {
+    width: 100% !important;
+}
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+    width: 100%;
+    
+    position: relative;
+    display: none;
+    padding: 0;
+    margin: 0;
+}
+/* Expanding image text */
+#imgtext {
+    background-color: black;
+    position: absolute;
+    width: 100%;;
+    bottom: 0px;
+    padding-left: 15px;
+    color: white;
+    font-size: 20px;
+}
+  
+/* Closable button inside the image */
+/*.closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}*/
+
+.prd_txt {
+    text-align: justify;
+    font-size: 18px;
+}
+.prd_tab {
+    text-align: justify;
+    font-size: 16px;
+}

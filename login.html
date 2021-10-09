@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>Store UTAGS | Login</title>
+	<meta charset="utf-8">
+	  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link href="http://www.utags.edu.mx/templates/tx_academia2/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+</head>
+<body>
+  <div id="general"style="display: none;">
+	<!--Menu navegación-->
+	<nav class="navbar navbar-expand-lg navbar-Dark bg-Dark p-3">
+    <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img alt="lobos UTags" src="img/lobos_UT.png" style="height: 78px;">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="col-4">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+              </li>
+            </ul>
+          </div>          
+          <div class="col-5 mt-3">
+            <!--
+            <div class="mr-auto mb-4">
+              <div class="d-inline-block col-8">
+                <input class="form-control mr-sm-2" type="text" placeholder="Buscar..." aria-label="Search" id="txt_busqueda">
+              </div>
+              <div class="d-inline-block">
+                <button class="btn btn-outline-info btn-rounded waves-effect waves-light" style="margin-bottom: 5px;" id="btn_buscar" type="button" onclick="cargaProductos();">Buscar</button>
+              </div>
+            </div>-->
+          </div>
+          <div class="" style="color: #fff; text-align: right; font-size: 17px;">
+            <!--<span id="usr_name">*</span> | <span id="btn_sesion">
+              <a id="btn_sesionAct" href="#">La sesión</a>
+            </span>&nbsp;&nbsp;
+            <img src="img/perfil.png" width="22%;" />-->
+          </div>      
+        </div>
+    </nav>
+  <!--Fin Menu navegacion-->
+  <!--Curpo del contenido-->
+    <div class="container"><br><br>
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <h3 class="text-center">Inicio de Sesión en tu cuenta</h3>
+          <div class="row">
+            <div class="col text-end" style="font-weight: 100;"><b>¿No tienes una cuenta?</b></div>
+            <div class="col"><a style="color: #33A8FF;" href="crearCuenta.html">Crear cuenta</a></div>
+          </div>
+          <form class="form-control" id="formLogin" novalidate>
+            <div style="margin-top:10%;">
+              <label class="form-label" for="">Ingresa tu correo electrónico</label>
+              <input class="form-control" type="text" id="emial" name="email" required>
+            </div>
+            <div style="margin-top: 5%;">
+              <label class="form-label" for="">Ingresa tu contraseña</label>
+              <input class="form-control" type="password" id="password" name="password" required>
+            </div>
+            <div class="form-check" style="margin-top: 5%;">
+              <input class="form-check-input" id="recuerdame" name="recuerdame" type="checkbox" value="">
+              <label class="form-check-label" for="">
+                Recuérdame
+              </label>
+            </div>
+            <div style="margin-top: 3%;">
+              <a href="recupass.html" style="color:#33A8FF;">¿Olvidaste tu nombre de usuario o contraseña?</a>
+            </div>
+            <div class="d-grid gap-2" style="margin-top: 3%;">
+              <button type="submit" class="btn btn-outline-secondary" id="btn_enviaForm">Iniciar Sesión</button>
+            </div>
+            <div class="row">
+              <div id="resp_errores">
+                <br>
+                <p id="rep_errores_cont" style="color: rgb(232, 38, 38); font-size: 12px;"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-4"></div>
+      </div>
+  </div>
+  <!--Fin Curpo del contenido-->
+</div>
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
